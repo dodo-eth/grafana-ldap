@@ -1,0 +1,17 @@
+{
+    "ldap": {        
+        "user" : "advw.grafana", //AD user
+        "password" : "password", //passwrod AD user
+        "server_url" : "ldaps://ldaps.local:636", //ldap server_url
+        "ou_dn": "OU=Grafana,OU=Service accounts and groups,DC=LALA,DC=local" // OU в которой сущетсвуют группы
+    },
+    "grafana": {
+        "basic_auth": "base64", // log:pass in base64 
+        "grafana_url": "http://grafana-app",  //url grafana 
+        "auto_create_teams": true      // создавать или не создавать автоматически teams
+    },
+       
+    "roles": { 
+        "to_team": "Viewer"// С какой ролью приезжает пользователь
+    } 
+}
